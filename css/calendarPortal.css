@@ -1,0 +1,36 @@
+/* myStyle.css */
+body {
+ background-color: steelblue;
+ color: #FFFFFF;
+}
+h1 {
+ color: rgb(51, 54, 255);
+ text-align: center;
+ font: italic 200% fantasy;
+}
+p {
+ color: #f7f0f0;
+ text-align: center;
+ font: bold 200% arial;
+}
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+label {
+    float: left;
+    width: 150px;
+    text-align: right;
+    margin-right: 0.5em;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}

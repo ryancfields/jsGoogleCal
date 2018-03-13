@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Google Calendar API</title>
+    <meta charset='utf-8' />
+</head>
+<!--Add basic CSS formatting-->
+<link rel="stylesheet" type="text/css" href="css/calendarPortal.css" media="screen" />
+
+<body>
+
+    <p>Google Calendar Create Event</p>
+
+        <form name="createEvent">
+            <label>Event Summary:</label> 
+            <input type="text" name="summary"  id="summary"><br>
+            <label>Start Date:</label>
+            <input type="text" name="startdate" id="startdatetime"><br>
+            <label>End Date:</label>
+            <input type="text" name="enddate" id="enddatetime"><br>
+            <label>Attendees:</label>
+            <input type="text" name="attendees" id="attendees"><br>
+            <label>Location:</label>
+            <input type="text" name="location" id="location"><br>
+            <br>
+            <input type="submit" value="Submit" width="48" height="48" onClick="insertEvent();">
+        </form>
+
+    <br><br>
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize-button" aligh="left" style="display: none;">Authorize</button>
+    <button id="signout-button" aligh="right" style="display: none;">Sign Out</button>
+    
+    <br><br>
+    <!--List upcoming events is from Google's API Getting Started:-->
+    <button id="event-button">Show New Events</button>
+
+    <pre id="content"></pre>
+
+    <!--Google oAuth Configuration from their quickstart guide: https://developers.google.com/calendar/quickstart/js -->
+    <script src="scripts/googleAuth.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+    <!--jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--jquery validate -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+    <!--jquery css-->
+    <link rel="stylesheet" type="text/css" src="jquery.css" />
+    <!--jquery validate UI-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    
+    <!--calender event handler-->
+    <script src="scripts/calHandle.js"></script>
+</body>
+
+</html>
